@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import styles from "../moduleCss/nav.module.css";
 
 const style = {
   display: "flex",
@@ -15,26 +16,13 @@ const links = [
   { to: "./signup", text: "SignUp" },
 ];
 
-const inactveLinkStyle = {
-  textDecoration: "none",
-  fontWeight: "bold",
-  color: "blue",
-};
-
-const actveLinkStyle = {
-  textDecoration: "none",
-  fontWeight: "bold",
-  color: "red",
-};
-
 function Nav() {
   return (
     <div style={style}>
       {links.map((item, ind) => (
         <NavLink
-          className="navLinks"
-          style={({ isActive }) => {
-            return isActive ? actveLinkStyle : inactveLinkStyle;
+          className={({ isActive }) => {
+            return isActive ? styles.activeLinkStyle : styles.inactiveLinkStyle;
           }}
           key={item.to}
           to={item.to}

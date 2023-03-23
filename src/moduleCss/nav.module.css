@@ -1,0 +1,16 @@
+.activeLinkStyle {
+  text-decoration: none;
+  font-weight: bold;
+  color: red;
+}
+.activeLinkStyle:hover {
+  color: green;
+}
+.inactiveLinkStyle {
+  text-decoration: none;
+  font-weight: bold;
+  color: blue;
+}
+.inactiveLinkStyle:hover {
+  color: green;
+}
