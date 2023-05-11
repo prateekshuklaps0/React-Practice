@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function Counter({ handleClick, count }) {
+function Counter({ handleClick, count }) {
   return (
     <div>
       <button onClick={(e) => handleClick(1, e)}>+</button>
@@ -9,3 +9,4 @@ export default function Counter({ handleClick, count }) {
     </div>
   );
 }
+export default Counter;
